@@ -16,6 +16,7 @@ public class InsuranceManagementSystemApplication {
 	
 	//	we are configuring "LocalValidatorFactoryBean" as Spring bean object here. It uses "ReloadableResourceBundleMessageSource"
 	//  class to read the messages.properties file and resolve the validation messages.
+	
 	@Bean
 	public LocalValidatorFactoryBean validator(MessageSource messageSource) {
 		
