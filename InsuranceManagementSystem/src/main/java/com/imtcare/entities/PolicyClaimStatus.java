@@ -12,6 +12,7 @@ public enum PolicyClaimStatus {
 
 	 private final String claimStatus;
 
+	 
 	 PolicyClaimStatus(String claimStatus) {
 		 
 		 this.claimStatus = claimStatus;

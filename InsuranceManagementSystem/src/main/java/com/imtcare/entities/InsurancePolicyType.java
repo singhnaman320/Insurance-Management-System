@@ -11,6 +11,7 @@ public enum InsurancePolicyType {
 	 
 	 HOME_NSURANCE("Home Insurance");
 
+	
 	 private final String insurancePolicy;
 
 	 InsurancePolicyType(String insurancePolicy) {
@@ -18,6 +19,7 @@ public enum InsurancePolicyType {
 		 this.insurancePolicy = insurancePolicy;
 	 }
 
+	 
 	public String getInsurancePolicy() {
 		return insurancePolicy;
 	}
