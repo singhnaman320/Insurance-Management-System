@@ -11,6 +11,7 @@ import com.imtcare.services.ClaimServices;
 @Service // This annotation is compulsory
 public class ClaimServicesImplementation implements ClaimServices{
 
+	
 	@Override
 	public Claim createNewClaim(Claim claim) throws ClaimNotFoundException {
 		// TODO Auto-generated method stub

@@ -11,6 +11,7 @@ import com.imtcare.services.InsurancePolicyServices;
 @Service // This annotation is compulsory
 public class InsurancePolicyServicesImplementation implements InsurancePolicyServices{
 
+	
 	@Override
 	public InsurancePolicy createNewInsurancePolicy(InsurancePolicy insurancePolicy) throws PolicyNotFoundException {
 		// TODO Auto-generated method stub
