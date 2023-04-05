@@ -22,5 +22,4 @@ public interface ClientServices {
 		
 	// Delete a client
 	public Client deleteClientById(Integer clientId)throws ClientNotFoundException;
-	
 }
