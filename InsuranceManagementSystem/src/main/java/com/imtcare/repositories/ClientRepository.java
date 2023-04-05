@@ -9,4 +9,5 @@ import com.imtcare.entities.Client;
 public interface ClientRepository extends JpaRepository<Client, Integer>{
 
 	public Client findByClientId(Integer clientId);
+	
 }

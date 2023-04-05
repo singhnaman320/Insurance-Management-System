@@ -9,4 +9,5 @@ import com.imtcare.entities.InsurancePolicy;
 public interface InsurancePolicyRepository extends JpaRepository<InsurancePolicy, Integer>{
 
 	public InsurancePolicy findByPolicyNumber(Integer policyNumber);
+	
 }
