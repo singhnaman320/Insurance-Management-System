@@ -2,10 +2,13 @@ package com.imtcare.servicesImplementation;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.imtcare.entities.InsurancePolicy;
 import com.imtcare.exceptions.PolicyNotFoundException;
 import com.imtcare.services.InsurancePolicyServices;
 
+@Service // This annotation is compulsory
 public class InsurancePolicyServicesImplementation implements InsurancePolicyServices{
 
 	@Override

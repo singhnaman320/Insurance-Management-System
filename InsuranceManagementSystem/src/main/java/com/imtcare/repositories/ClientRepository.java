@@ -8,4 +8,5 @@ import com.imtcare.entities.Client;
 @Repository  //Repository annotation is optional here
 public interface ClientRepository extends JpaRepository<Client, Integer>{
 
+	public Client findByClientId(Integer clientId);
 }

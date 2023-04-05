@@ -4,17 +4,18 @@ import java.util.List;
 
 import com.imtcare.entities.Client;
 import com.imtcare.exceptions.ClientNotFoundException;
+import com.imtcare.exceptions.PolicyNotFoundException;
 
 public interface ClientServices {
 
 	// Create a new client
-	public Client createNewClient(Client client) throws ClientNotFoundException;
+	public Client createNewClient(Integer policyNumber, Client client) throws ClientNotFoundException, PolicyNotFoundException;
 		
 	// Fetch all clients
 	public List<Client> fetchAllClients()throws ClientNotFoundException;
 		
 	// Fetch a specific client by ID
-	public Client fetchClientById(Integer clientId) throws ClientNotFoundException;
+	public Client fetchClientDetailsById(Integer clientId) throws ClientNotFoundException;
 		
 	// Update a client's information
 	public Client updateClientById(Integer clientId, Client client) throws ClientNotFoundException;

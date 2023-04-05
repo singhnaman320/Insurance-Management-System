@@ -2,10 +2,13 @@ package com.imtcare.servicesImplementation;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.imtcare.entities.Claim;
 import com.imtcare.exceptions.ClaimNotFoundException;
 import com.imtcare.services.ClaimServices;
 
+@Service // This annotation is compulsory
 public class ClaimServicesImplementation implements ClaimServices{
 
 	@Override
