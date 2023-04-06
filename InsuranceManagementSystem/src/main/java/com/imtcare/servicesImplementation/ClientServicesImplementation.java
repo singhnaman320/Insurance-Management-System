@@ -38,6 +38,7 @@ public class ClientServicesImplementation implements ClientServices{
 			// assigning clients to policy and vice versa
 			
 			insurancePolicy.getClientsSet().add(client);
+			
 			client.getInsurancePolicies().add(insurancePolicy);
 			
 			return clientRepository.save(client);
@@ -88,10 +89,15 @@ public class ClientServicesImplementation implements ClientServices{
 			// setting new values
 			
 			presentClient.setName(client.getName());
+			
 			presentClient.setMobileNumber(client.getMobileNumber());
+			
 			presentClient.setEmail(client.getEmail());
+			
 			presentClient.setDateOfBirth(client.getDateOfBirth());
+			
 			presentClient.setAddress(client.getAddress());
+			
 			presentClient.setInsurancePolicies(client.getInsurancePolicies());
 			
 			return clientRepository.save(presentClient);
@@ -109,13 +115,14 @@ public class ClientServicesImplementation implements ClientServices{
 		if(clientToBeDeleted.isPresent()) {
 			
 			Client registeredClient = clientToBeDeleted.get(); // getting registered client with given Id 
-			clientRepository.delete(registeredClient); // delete registered client with given d
+			
+			clientRepository.delete(registeredClient); // delete registered client with given Id
 			
 			return registeredClient; // return deleted client
 			
 		}else
 			
-			throw new ClientNotFoundException("Unable to delete client details with client Id "+ clientId);
+			throw new ClientNotFoundException("Sorry! No client present with client Id "+ clientId);
 
 	}
 

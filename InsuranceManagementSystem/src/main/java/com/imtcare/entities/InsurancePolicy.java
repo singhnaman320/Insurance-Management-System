@@ -79,7 +79,7 @@ public class InsurancePolicy {
     
     @JsonIgnore
     @OneToMany(mappedBy = "givenInsurancePolicy", cascade = CascadeType.ALL)
-    private List<Claim> claimsList= new ArrayList<>();
+    private Set<Claim> claimSet= new HashSet<>();
     
 
     @JsonIgnore

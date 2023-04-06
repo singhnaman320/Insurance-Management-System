@@ -17,7 +17,7 @@ public interface ClaimServices {
 	public Claim fetchClaimById(Integer claimId) throws ClaimNotFoundException;
 	
 	// Update a claim's information
-	public Claim updateClaimById(Integer claimId, Claim claim) throws ClaimNotFoundException;
+	public Claim updateClaimById(Integer claimId, Claim policyClaim) throws ClaimNotFoundException;
 	
 	// Delete a claim
 	public Claim deleteClaimById(Integer claimId)throws ClaimNotFoundException;
