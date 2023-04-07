@@ -30,8 +30,7 @@ public class InsurancePolicyController {
 	// Registering new policy
 	
 	@PostMapping("/")
-	public ResponseEntity<InsurancePolicy> createNewInsurancePolicyHandler(@RequestBody InsurancePolicy insurancePolicy) 
-																						throws PolicyNotFoundException{
+	public ResponseEntity<InsurancePolicy> createNewInsurancePolicyHandler(@RequestBody InsurancePolicy insurancePolicy) throws PolicyNotFoundException{
 		
 		InsurancePolicy addPolicy = insurancePolicyServices.createNewInsurancePolicy(insurancePolicy);
 		
@@ -53,8 +52,7 @@ public class InsurancePolicyController {
 	// getting policy details by Id
 	
     @GetMapping("/{id}")
-    public ResponseEntity<InsurancePolicy> fetchInsurancePolicyByIdHandler(@PathVariable("id") Integer policyId) 
-    																				throws PolicyNotFoundException{
+    public ResponseEntity<InsurancePolicy> fetchInsurancePolicyByIdHandler(@PathVariable("id") Integer policyId) throws PolicyNotFoundException{
     	
         InsurancePolicy getpolicyById = insurancePolicyServices.fetchInsurancePolicyById(policyId);
         
@@ -65,8 +63,7 @@ public class InsurancePolicyController {
     // Updating policy details by policy Id
     
     @PutMapping("/{id}")
-    public ResponseEntity<InsurancePolicy> updateInsurancePolicyByIdHandler(@PathVariable("id") Integer policyId, InsurancePolicy insurancePolicy)
-    																													throws PolicyNotFoundException{
+    public ResponseEntity<InsurancePolicy> updateInsurancePolicyByIdHandler(@PathVariable("id") Integer policyId, InsurancePolicy insurancePolicy) throws PolicyNotFoundException{
     	
         InsurancePolicy updatepolicy = insurancePolicyServices.updateInsurancePolicyById(policyId, insurancePolicy);
         
@@ -77,8 +74,7 @@ public class InsurancePolicyController {
     // Delete policy by policy Id
     
     @DeleteMapping("/{id}")
-    public ResponseEntity<InsurancePolicy> deletePolicyByIDHandler(@PathVariable("id") Integer policyId) 
-    																		throws PolicyNotFoundException{
+    public ResponseEntity<InsurancePolicy> deletePolicyByIDHandler(@PathVariable("id") Integer policyId) throws PolicyNotFoundException{
     	
         InsurancePolicy deletePolicy = insurancePolicyServices.deleteInsurancePolicyById(policyId);
         
