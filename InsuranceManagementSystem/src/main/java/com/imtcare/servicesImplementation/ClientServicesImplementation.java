@@ -25,10 +25,19 @@ public class ClientServicesImplementation implements ClientServices{
 	private InsurancePolicyRepository insurancePolicyRepository;
 	
 	@Override
-	public Client createNewClient(Integer policyNumber, Client client) throws PolicyNotFoundException {
+	public Client createNewClient(Integer policyNumber, Client client) throws ClientNotFoundException, PolicyNotFoundException {
 		// TODO Auto-generated method stub
 		
-		// First check for the policy number, if exists or not
+		// Check if client is present or not
+		
+		Optional<Client> findClient = clientRepository.findById(client.getClientId());
+		
+		if(findClient.isPresent()) {
+			
+			throw new ClientNotFoundException("Client already registered with given client Id "+ client.getClientId());
+		}
+		
+		// Check for the policy number, if exists or not
 		// If policy exists then only a client can be attached to policy
 		
 		InsurancePolicy insurancePolicy= insurancePolicyRepository.findByPolicyNumber(policyNumber);
