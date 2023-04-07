@@ -25,7 +25,6 @@ public class ClaimController {
 	@Autowired
 	private ClaimServices claimServices;
 	
-	/*
 	
 	// Registering claim on policy
 	
@@ -81,6 +80,4 @@ public class ClaimController {
         
         return new ResponseEntity<>(deleteClaim, HttpStatus.OK);
     }
-    
-    */
 }
