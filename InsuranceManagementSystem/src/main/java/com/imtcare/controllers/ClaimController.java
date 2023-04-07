@@ -62,8 +62,7 @@ public class ClaimController {
     // Updating claim details by claim Id
     
     @PutMapping("/{id}")
-    public ResponseEntity<Claim> updateClaimByIdHandler(@PathVariable("id") Integer claimId, @RequestBody Claim claim) 
-    																						throws ClaimNotFoundException{
+    public ResponseEntity<Claim> updateClaimByIdHandler(@PathVariable("id") Integer claimId, @RequestBody Claim claim) throws ClaimNotFoundException{
     	
         Claim updateClaim = claimServices.updateClaimById(claimId, claim);
         
