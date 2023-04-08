@@ -6,6 +6,9 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
+// We don't have to annotate this class with @EnableSwagger2 as we are are not adding spring-fox dependency in pom.xml
+// Adding springdoc-openapi-ui dependency in pom.xml automatically enable swagger without any annotation
+
 @SpringBootApplication
 public class InsuranceManagementSystemApplication {
 
