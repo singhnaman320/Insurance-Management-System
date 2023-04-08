@@ -2,6 +2,8 @@ package com.imtcare.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +33,7 @@ public class ClientController {
 	// Registering new client 
 	
 	@PostMapping("/")
-    public ResponseEntity<Client> createNewClientHandler( @RequestParam Integer policyNumber, @RequestBody Client client) throws ClientNotFoundException, PolicyNotFoundException{
+    public ResponseEntity<Client> createNewClientHandler(@Valid @RequestParam Integer policyNumber, @RequestBody Client client) throws ClientNotFoundException, PolicyNotFoundException{
 		
         Client newclient = clientServices.createNewClient(policyNumber, client);
         

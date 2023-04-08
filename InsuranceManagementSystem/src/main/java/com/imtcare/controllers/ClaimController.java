@@ -2,6 +2,8 @@ package com.imtcare.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +31,7 @@ public class ClaimController {
 	// Registering claim on policy
 	
 	@PostMapping("/")
-    public ResponseEntity<Claim> createNewClaimHandler(@RequestBody Claim claim) throws ClaimNotFoundException{
+    public ResponseEntity<Claim> createNewClaimHandler(@Valid @RequestBody Claim claim) throws ClaimNotFoundException{
     	
         Claim addClaim = claimServices.createNewClaim(claim);
         

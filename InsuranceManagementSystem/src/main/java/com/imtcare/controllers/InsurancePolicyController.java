@@ -2,6 +2,8 @@ package com.imtcare.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +32,7 @@ public class InsurancePolicyController {
 	// Registering new policy
 	
 	@PostMapping("/")
-	public ResponseEntity<InsurancePolicy> createNewInsurancePolicyHandler(@RequestBody InsurancePolicy insurancePolicy) throws PolicyNotFoundException{
+	public ResponseEntity<InsurancePolicy> createNewInsurancePolicyHandler(@Valid @RequestBody InsurancePolicy insurancePolicy) throws PolicyNotFoundException{
 		
 		InsurancePolicy addPolicy = insurancePolicyServices.createNewInsurancePolicy(insurancePolicy);
 		
