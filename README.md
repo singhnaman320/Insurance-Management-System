@@ -76,7 +76,7 @@ The main features developed in this application are as follows:</p>
  <h2 id="installation-run">Installation &amp; Run</h2>
     <ul>
         
-        <li>Step-1: Before running the REST API server(example: Tomcat), update the database configuration inside the <a       href="https://github.com/singhnaman320/Insurance-Management-System/blob/master/InsuranceManagementSystem/src/main/resources/application.properties">application.properties</a>
+        <li>Step-1: Before running the REST API server(example: Tomcat), update the database configuration inside the <a href="https://github.com/singhnaman320/Insurance-Management-System/blob/master/InsuranceManagementSystem/src/main/resources/application.properties">application.properties</a>
             file.</li>
         <li>Step-2: Update your port number, database name, username and password as per your local configuration.</li>
         <li>NOTE: Taking the same database name is not important as here database specific properties are dynamic in nature. If you want to take a different database name then also your application will work fine.</li>
@@ -86,7 +86,7 @@ The main features developed in this application are as follows:</p>
     </ul>
     <pre>
         <code>
-            server.port=<span class="hljs-number">8080</span>
+            server.port=<span class="hljs-number">8088</span>
             <br>
             #database specific properties
             spring<span>.datasource</span><span>.url</span>=jdbc:mysql:<span>//${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:InsuranceManagementDatabase};</span>
