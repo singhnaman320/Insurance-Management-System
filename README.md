@@ -73,7 +73,7 @@ The main features developed in this application are as follows:</p>
 <hr>
 
 
- <h3 id="installation-run">Installation &amp; Run</h3>
+ <h2 id="installation-run">Installation &amp; Run</h2>
     <ul>
         <li>Step-1: Before running the REST API server(example: Tomcat), update the database configuration inside the <a href="https://github.com/singhnaman320/Insurance-Management-System/blob/master/InsuranceManagementSystem/src/main/resources/application.properties">application.properties</a>
             file.</li>
