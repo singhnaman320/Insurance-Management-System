@@ -77,7 +77,7 @@ The main features developed in this application are as follows:</p>
     <ul>
         <li>Step-1: Before running the REST API server(example: Tomcat), update the database configuration inside the <a href="https://github.com/singhnaman320/Insurance-Management-System/blob/master/InsuranceManagementSystem/src/main/resources/application.properties">application.properties</a>
             file.</li>
-        <li>Step-2: Update your port number, database name, username and password as per your local configuration.</li>
+        <li>Step-2: Update your port number, database name, username and password as per required configuration.</li>
         <li>NOTE: Taking the same database name is not important as here database specific properties are dynamic in nature. If you want to take a different database name then also your application will work fine.</li>
         <li>Step-3: Start the server by running SpringBoot application.</li>
         <li>Step-4: Use API platform such as Postman to send and retrieve your data in form of request. You can also use Swagger for the same.</li>
